@@ -1,0 +1,665 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+li{
+    list-style: none;
+}
+/* ----------- Common CSS Style ------------- */
+.dancing-font {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+  }
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+  }
+.container{
+    max-width: 1500px;
+    margin: 0px auto;
+}
+.heading-style{
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+}
+.description-style{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.primary-button{
+    padding: 10px 25px;
+    border-radius: 42px;
+    background: rgb(230, 83, 60);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+}
+.middle-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.habit-image{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid rgb(119, 117, 117);
+}
+.habit-heading-style{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.bmi-box-design{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    padding-left: 20px;
+}
+/* -------- --------main CSS---------- --------- */
+
+/* ----- header nav-bar section ----- */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+.company-logo img{
+    width: 100%;
+    max-width: 100px;
+}
+.company-name{
+    color: white; 
+    font-weight: 900;
+    font-size: 3rem;  
+}
+.fitness-text{
+    font-size: 2rem;
+    color: rgb(230, 83, 60);
+}
+.nav-links{
+    display: flex;
+    gap: 40px;
+    color: white;
+    align-items: center;
+}
+.nav-link{
+    list-style: none;
+    cursor: pointer;
+}
+.bar-icon{
+    display: none;
+}
+.home{
+    padding: 5px 20px;
+    background-color: rgb(230, 83, 60);
+    border-radius: 50px;
+
+}
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+/* -------- Banner Section----------- */
+.header-banner-bg{
+    background: linear-gradient(90.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 100%);
+}
+.banner{
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+}
+.left-banner{
+    display: flex;
+    align-items: center;
+}
+.left-banner-elements{
+    color: white;
+    max-width: 520px;
+}
+.left-banner-heading{
+    font-weight: 900;
+    font-size: 5rem; 
+}
+.second-button{
+    background-color: black;
+    border: 1px solid rgb(255, 255, 255);
+}
+.right-banner{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.left-card-circle{
+    width: 40px;
+    height: 40px;
+    background: rgb(230, 83, 60);
+    border-radius: 50%;
+    display: flex;
+    justify-tracks: center;
+    align-items: center;
+    
+}
+.play-button{
+    margin-left: 15px;
+}
+.left-card h3{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+.left-card p{
+    margin: 0;
+    padding: 0;
+}
+.left-card{
+    width: 193px;
+    height: 98px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    
+}
+.right-card{
+    width: 193px;
+    height: 98px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+.right-card h3{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+.right-card p{
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- change your habit section-------- */
+
+.change-habit-container{
+    margin-top: 100px;
+}
+.change-habit-heading{
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.change-habit-crads{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 100px;
+}
+.movement, .time, .practice, .weight-loss{
+    flex-direction: column;
+    gap: 10px;
+}
+.movement-image{
+    background-image:url(../images/movement.png) ;
+}
+.time-image{
+    background-image: url(../images/time.png);
+}
+.practice-image{
+    background-image: url(../images/practice.png);
+}
+.weight-loss-image{
+    background-image: url(../images/weightloss.png);
+}
+
+/* -----------run extra section------------ */
+.run-extra-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 18px;
+    background: rgb(34, 34, 34);
+    margin-top: 100px;
+    
+}
+.run-extra-heading{
+    width: 95%;
+    padding: 50px;
+}
+.run-extra-img-right{
+    padding: 30px;
+}
+.run-extra-img-right img{
+    width: 80%;
+    border-radius: 18px; 
+    margin-left: 120px;
+}
+.run-extra-heading h3,p {
+    margin-bottom: 30px;
+}
+
+/* ------------------ BMI Section -------------- */
+.bmi-upper-sec{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.bmi-heading h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.bmi-description{
+    text-align: center;
+}
+.bmi-lower-sec{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background: rgb(34, 34, 34);
+}
+.bmi-lower-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 0px 60px 0px;
+}
+.bmi-lower-left-heading h3{
+    color: white;
+    font-size: 2rem;
+}
+.bmi-chart-heading{
+    color: white;
+}
+.bmi-chart td{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 40px;
+}
+.bmi-lower-right{
+    padding: 60px 0px 60px 0px;
+}
+.bmi-chart{
+    border-collapse: collapse;
+}
+.calculate-bmi-heading h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.calculate-bmi-container{
+    max-width: 90%;
+    padding-left: 20px;
+}
+.bmi-box-container{
+    color: white;
+}
+.calculate-bmi-heading{
+    color: white;
+}
+.claculate-bmi-row-1{
+    display: flex;
+    gap: 15px;
+}
+.claculate-bmi-row-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 20px 0px 20px 0px;
+}
+.claculate-bmi-row-3{
+    margin-bottom: 20px;
+}
+.sex{
+    position: relative;
+}
+.activity-factor{
+    position: relative;
+}
+.angle-down{
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.calculate-btn{
+    width: 35%;
+    height: 50px;
+}
+.calculate-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+/* ---------- meet our team section ---------- */  
+.team-sub-container{
+    margin-top: 100px;
+}
+.team-upper{
+    flex-direction: column;
+    gap: 20px;
+}
+.team-lower-section{
+    margin-top: 50px;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,350px);
+    gap: 20px;
+    padding: 20px;
+    background-color:  rgb(70, 70, 68);
+    border-radius: 16px;  
+}
+.trainer{
+    border-radius: 16px;
+    background-size: cover;
+    position: relative;
+}
+.trainer h3{
+    color: white;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+}
+.trainer p{
+    color: white;
+    position: absolute; 
+    left: 20px;
+    bottom: -20px; 
+}
+.trainer-1{
+    background-image: url(../images/trainer1.png);
+}
+.trainer-2{
+    background-image: url(../images/trainer2.png);
+}
+.trainer-3{
+    background-image: url(../images/trainer3.png);
+}
+.trainer-4{
+    background-image: url(../images/trainer4.png);
+}
+.trainer-5{
+    background-image: url(../images/trainer5.png);
+}
+.trainer-6{
+    background-image: url(../images/trainer6.png);
+}
+/* -----------footer section---------------------- */
+.footer-container{
+    margin-top: 100px;
+    background: rgb(34, 34, 34);
+}
+.footer-upper{
+    display: grid;
+    grid-template-columns: .70fr .15fr .15fr;
+    gap: 100px;
+    padding: 100px 0px;
+}
+.footer-upper-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.footer-upper-left p{
+    text-align:left;
+    font-size: 1.2rem;
+}
+.get-started-header, .footer-service-header{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.service, .contact, .affiliate, .about-us, .fitness, .workout, .app-design {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.footer-lower{
+    padding: 0px 0px 20px 0px;
+}
+.copyright{
+    margin: 50px 0px;
+    text-align: center;
+}
+.footer-heading-style{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.footer-service-style{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    margin: 0px;
+}
+.footer-service-style:hover{
+    cursor: pointer;
+}
+.footer-upper-middle{
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+}  
+.footer-upper-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+}  
+/* ------------ Responsive Section ------------ */
+@media screen and (max-width:576px) {
+    .logo-container{
+        margin: 20px 0px;
+    }
+    .company-logo img{
+        max-width: 50px;
+    }
+    .company-name{
+        font-size: 2rem;
+    }
+    .fitness-text{
+        font-size: 1rem;
+    }
+    .home, .service, .about, .contact{
+        display: none;
+    }
+    .bar-icon{
+        display: block;
+        margin-right: 15px;
+    }
+    .banner{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .left-banner h3{
+        font-size: 3rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .left-banner p{
+        max-width: 95%;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-left: 8px;
+    }
+    .left-card-circle{
+        width: 30px;
+        height: 30px;
+    }
+    .play-button{
+        margin-left: 10px;
+    }
+    .right-card h3, .left-card h3{
+        font-size: 1.5rem;
+    }
+    .right-card p, .left-card p{
+        font-size: .75rem;
+    }
+    .right-card, .left-card{
+        width: 145px;
+        height: 75px;
+    }
+    .right-card{
+        top: 50px;
+        right: 10px;
+    }
+    .left-card{
+        top: 250px;
+    }
+    .buttons{
+        justify-content: center;
+    }
+/* -------- cahnge your habit ------ */
+    .change-habit-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .change-habit-heading{
+        max-width: 350px;
+        margin-bottom: 0px;
+    }
+    .change-habit-heading h3{
+        font-size: 2.5rem;
+    }
+    .change-habit-heading p{
+        font-size: 0.85rem;
+        margin-top: 10px;
+        
+    }
+    .change-habit-crads{
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+/* --------run extra section ---------- */
+    .run-extra-container{
+        flex-direction: column;
+        width: 90%;
+        margin-left: 20px;
+    }
+    .run-extra-img-right img{
+        width: 100%;
+        border-radius: 10px; 
+        margin-left: 0px;
+    }
+    .run-extra-heading h3 {
+        font-size: 2rem;
+    }
+    .run-extra-heading{
+        width: 100%;
+        padding: 20px;
+    }
+    .join-now-btn{
+        width: 100%;
+    }
+
+/* ------------- BMI Section --------------- */
+.bmi-upper-sec{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 90%;
+    margin-left: 17px;
+}
+.bmi-heading h3{
+    font-size: 2rem;
+    
+}
+.bmi-lower-sec{
+    grid-template-columns: 1fr;
+}
+.bmi-lower-left{
+    width: 90%;
+    margin-left: 18px;
+}
+.calculate-btn a{
+    font-size: .95rem;
+}
+/* --------- meet our team section------------ */
+    .team-sub-container{
+        max-width: 95%;
+        margin-left: 10px;
+    }
+    .team-upper h3,p{
+        text-align: center;
+    }
+    .team-upper h3{
+        font-size: 2rem;
+    }
+    .team-img-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,320px); 
+        padding: 20px; 
+        margin-left: 2px;
+    }
+    .trainer-4{
+        display: none;
+    }
+/* ------------ footer section---------- */
+
+.footer-upper{
+    grid-template-columns: 1fr;
+    width: 90%;
+    padding: 50px 0px;
+    gap: 70px;
+}
+.footer-company-name h3{
+    font-size: 3rem;
+}
+.footer-company-name {
+    font-size: 4rem;
+}
+.footer-fitness-text{
+    font-size: 1.75rem;
+}
+.footer-upper-left p{
+    font-size: 1rem;
+    text-align: center;
+}
+.footer-heading-style{
+    text-align: center;
+}
+.footer-service-style{
+    font-size: 1.25rem;
+    text-align: center;
+}
+}
