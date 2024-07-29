@@ -690,8 +690,11 @@ li{
 .package-boxes{
     grid-template-columns: 1fr;
 }
+.package-heading h3{
+    font-size: 3rem;
+}
 .package-container{
-    width: 80%;
+    width: 90%;
 }
 .choose-pkg-btn{
     margin-left: 22.5%;
