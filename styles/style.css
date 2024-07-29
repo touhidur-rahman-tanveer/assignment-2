@@ -418,6 +418,57 @@ li{
 .trainer-6{
     background-image: url(../images/trainer6.png);
 }
+
+/* --------- our packages section --------------- */
+.package-container{
+    margin-top: 100px; 
+}
+.main-area{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius:20px 50px;
+}
+
+.box-contents{
+    padding: 75px 0px;
+}
+.package-boxes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+    margin-top: 100px;
+}
+.package-heading h3{
+    text-align: center;
+}
+.box-header h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
+    
+}
+.box-header hr{
+    margin-top: 10px;
+}
+   
+.box-header p{
+    font-size: 1.30rem;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+}
+.box-description p{
+    text-align: center;
+    font-size: 1.10rem;
+}
+.choose-pkg-btn{
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+.choose-pkg-btn:hover{
+    cursor: pointer;
+}
 /* -----------footer section---------------------- */
 .footer-container{
     margin-top: 100px;
@@ -634,6 +685,17 @@ li{
     .trainer-4{
         display: none;
     }
+
+/* ------------------ Our Packages ----------- */
+.package-boxes{
+    grid-template-columns: 1fr;
+}
+.package-container{
+    width: 80%;
+}
+.choose-pkg-btn{
+    margin-left: 22.5%;
+}
 /* ------------ footer section---------- */
 
 .footer-upper{
